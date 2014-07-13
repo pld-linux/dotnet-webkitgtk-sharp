@@ -1,0 +1,10 @@
+--- webkitgtk-sharp-2.0.0/webkitgtk-sharp-3.0.pc.in~	2014-06-15 23:34:26.000000000 +0300
++++ webkitgtk-sharp-2.0.0/webkitgtk-sharp-3.0.pc.in	2014-07-13 11:46:01.995768737 +0300
+@@ -1,6 +1,6 @@
+ prefix=@prefix@
+ exec_prefix=${prefix}
+-libdir=@libdir@
++libdir=${exec_prefix}/lib
+ 
+ Name: @ASSEMBLY_TITLE@
+ Description: @ASSEMBLY_DESCRIPTION@
