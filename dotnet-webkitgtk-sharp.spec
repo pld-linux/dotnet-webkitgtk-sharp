@@ -11,7 +11,7 @@ Summary:	C# bindings for WebKitGTK+ 3.0 using GObject Introspection
 Summary(pl.UTF-8):	WebKit# - wiązanie WebKit dla Mono
 Name:		dotnet-webkitgtk-sharp
 Version:	2.0.0
-Release:	0.4
+Release:	0.5
 License:	LGPL v3
 Group:		Libraries
 Source0:	https://github.com/xDarkice/webkitgtk-sharp/releases/download/%{version}/webkitgtk-sharp-%{version}.tar.gz
@@ -20,10 +20,11 @@ Patch0:		pkgconfig.patch
 URL:		https://github.com/xDarkice/webkitgtk-sharp/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	dotnet-gtk-sharp3
-BuildRequires:	dotnet-soup-sharp
-BuildRequires:	gtk-webkit3-devel
+BuildRequires:	dotnet-gtk-sharp3-devel >= 2.99.2
+BuildRequires:	dotnet-soup-sharp-devel
+BuildRequires:	gtk-webkit3-devel >= 2.0
 BuildRequires:	mono-csharp >= 1.1.0
+BuildRequires:	mono-devel
 BuildRequires:	monodoc >= 2.6
 BuildRequires:	pkgconfig
 BuildRequires:	sed >= 4.0
