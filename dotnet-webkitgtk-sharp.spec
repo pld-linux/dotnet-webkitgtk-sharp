@@ -2,8 +2,6 @@
 # - fix docs build
 # - update descs (this is dor gtk3)
 # - cleanup/update deps
-# - ./configure[12519]: CHECK_MONOCAIRO: not found
-# - ./configure[12520]: CHECK_SOUPSHARP: not found
 #
 # Conditional build:
 %bcond_with	doc		# build with tests
@@ -13,8 +11,8 @@ Summary:	C# bindings for WebKitGTK+ 3.0 using GObject Introspection
 Summary(pl.UTF-8):	WebKit# - wiązanie WebKit dla Mono
 Name:		dotnet-webkitgtk-sharp
 Version:	2.0.0
-Release:	0.2
-License:	X11/MIT
+Release:	0.3
+License:	LGPL v3
 Group:		Libraries
 Source0:	https://github.com/xDarkice/webkitgtk-sharp/releases/download/%{version}/webkitgtk-sharp-%{version}.tar.gz
 # Source0-md5:	259d1b85975a93b878fa1bdc4254e83f
@@ -23,6 +21,7 @@ URL:		https://github.com/xDarkice/webkitgtk-sharp/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	dotnet-gtk-sharp2-devel >= 1.9.3
+BuildRequires:	dotnet-soup-sharp
 BuildRequires:	gtk-webkit-devel >= 1.1.15
 BuildRequires:	mono-csharp >= 1.1.0
 BuildRequires:	monodoc >= 2.6
@@ -65,7 +64,7 @@ Pliki programistyczne WebKit#.
 %{__sed} -i -e '/SUBDIRS/ s/doc//' Makefile.am
 
 %build
-%{__aclocal}
+%{__aclocal} -I m4
 %{__autoconf}
 %{__automake}
 %configure \
