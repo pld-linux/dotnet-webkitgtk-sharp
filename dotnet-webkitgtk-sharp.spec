@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.mono
 Summary:	C# bindings for WebKitGTK+ 3.0 using GObject Introspection
 Summary(pl.UTF-8):	Wiązania C# do biblioteki WebKitGTK+ 3.0 wykorzystujące GObject Introspection
 Name:		dotnet-webkitgtk-sharp
