@@ -53,7 +53,7 @@ Pliki programistyczne WebKitGTK# 3.
 
 %prep
 %setup -q -n webkitgtk-sharp-%{version}
-%patch0 -p1
+%patch -P0 -p1
 
 install -d doc/en
 
