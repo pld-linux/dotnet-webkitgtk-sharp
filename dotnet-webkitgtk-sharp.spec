@@ -2,7 +2,7 @@ Summary:	C# bindings for WebKitGTK+ 3.0 using GObject Introspection
 Summary(pl.UTF-8):	Wiązania C# do biblioteki WebKitGTK+ 3.0 wykorzystujące GObject Introspection
 Name:		dotnet-webkitgtk-sharp
 Version:	2.0.0
-Release:	1
+Release:	2
 License:	LGPL v3
 Group:		Libraries
 Source0:	https://github.com/xDarkice/webkitgtk-sharp/releases/download/%{version}/webkitgtk-sharp-%{version}.tar.gz
