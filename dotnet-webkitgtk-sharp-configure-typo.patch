@@ -1,0 +1,16 @@
+Drop a stray "1" in front of an AC_PATH_PROG call.
+
+It makes the generated configure try to run a command called "1"
+("./configure: 1: inaccessible or not found").
+
+--- webkitgtk-sharp-2.0.0/configure.ac.orig
++++ webkitgtk-sharp-2.0.0/configure.ac
+@@ -38,7 +38,7 @@
+ PKG_CHECK_MODULES(MONO_DEPENDENCY, mono >= 1.0, has_mono=true, has_mono=false)
+ 
+ if test "x$has_mono" = "xtrue"; then
+-1	AC_PATH_PROG(RUNTIME, mono, no)
++	AC_PATH_PROG(RUNTIME, mono, no)
+ 	AC_PATH_PROG(CSC, gmcs, no)
+ 	LIB_PREFIX=.so
+ 	LIB_SUFFIX=

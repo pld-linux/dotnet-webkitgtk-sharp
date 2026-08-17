@@ -1,0 +1,16 @@
+Look for mcs instead of gmcs.
+
+mono 6.x dropped gmcs together with the 2.0 profile; mcs is the only C#
+compiler it ships.
+
+--- webkitgtk-sharp-2.0.0/configure.ac.orig
++++ webkitgtk-sharp-2.0.0/configure.ac
+@@ -39,7 +39,7 @@
+ 
+ if test "x$has_mono" = "xtrue"; then
+ 	AC_PATH_PROG(RUNTIME, mono, no)
+-	AC_PATH_PROG(CSC, gmcs, no)
++	AC_PATH_PROG(CSC, mcs, no)
+ 	LIB_PREFIX=.so
+ 	LIB_SUFFIX=
+ else
